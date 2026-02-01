@@ -22,7 +22,8 @@ let imia = prompt("Введите имя")
 alert("Привет " + imia + " !")
 //2
 let god = +prompt("Введите ваш год рождения")
-alert (2025 - god)
+const godS = 2025
+alert (godS - god)
 //3
 x = +prompt("Введите длину квадрата")
 let p = x * 4
