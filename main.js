@@ -16,19 +16,21 @@
 // alert("Площадь квадрата равна" + s)
 // let name = prompt("Введите имя")
 // alert("Привет" + name)
+
+
 // Домашнее задание на 5.02
 //1
-let imia = prompt("Введите имя")
-alert("Привет " + imia + " !")
+let imia = prompt("Введите имя");
+alert("Привет " + imia + " !");
 //2
-let god = +prompt("Введите ваш год рождения")
-const godS = 2025
-alert (godS - god)
+let god = +prompt("Введите ваш год рождения");
+const godUmolch = 2025;
+alert (godUmolch - god);
 //3
-x = +prompt("Введите длину квадрата")
-let p = x * 4
-alert(p)
+x = +prompt("Введите длину квадрата");
+let p = x * 4;
+alert(p);
 //4
-x = +prompt("Введите радиус окружности")
-let s = x**2 * 3.14
-alert (s)
+x = +prompt("Введите радиус окружности");
+let s = x**2 * 3.14;
+alert (s);
