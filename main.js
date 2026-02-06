@@ -45,35 +45,77 @@
 // console.log(Math.random() * 10);
 
 
-```
+
 // библиотека Math
 
 
-let num = 10.912345;
+// let num = 10.912345;
 
-console.log(Math.round(num)); // до ближайшего
-console.log(Math.floor(num)); // До нижнего
-console.log(Math.ceil(num)); // До верхнего
-console.log(Math.trunc(num)); // отбасывает дробь
-console.log(num.toFixed(2)); //
+// console.log(Math.round(num)); // до ближайшего
+// console.log(Math.floor(num)); // До нижнего
+// console.log(Math.ceil(num)); // До верхнего
+// console.log(Math.trunc(num)); // отбасывает дробь
+// console.log(num.toFixed(2)); //
 
-console.log(Math.random()) // рандом от 0 до 0.999999
+// console.log(Math.random()) // рандом от 0 до 0.999999
 // от 0 до 9
-console.log(Math.floor(Math.random() * 10))
+// console.log(Math.floor(Math.random() * 10))
 
-console.log(Math.PI); // Число Pi
-console.log(Math.E); // Число EEEE
+// console.log(Math.PI); // Число Pi
+// console.log(Math.E); // Число EEEE
 
-console.log(Math.min(1, 5, 3)); // минимальное значение 
-console.log(Math.max(1, 5, 3)); // максимальное значение
-```
+// console.log(Math.min(1, 5, 3)); // минимальное значение 
+// console.log(Math.max(1, 5, 3)); // максимальное значение
+
 // const minValue = (x, y) => {
 //     return Math.min (x, y);
 // }
 // console.log(minValue(10, 5))
 
 //Домашнее задание на 9.02
-let x = +prompt ("Введите свой возраст");
-if x <= 2 {
-    alert ("Вы ребенок!")
+
+// let x = +prompt ("Введите свой возраст");
+// if (x <= 11)  {
+//     alert ("Вы ребенок!")
+// } else if (x>=12 && x<18) {
+//     alert ("Вы подросток!")
+// } else if (x>=18 && x<60) {
+//     alert ("Вы взрослый!")
+// } else if (x>=60) {
+//     alert ("Вы пенсионер!")
+// }
+
+// let y = +prompt ("Введите число от 0 до 9");
+// if (y===0)  {
+//     alert (" ) ")
+// }  else if (y===2) {
+//     alert (" @ ")
+// } else if (y===3) {
+//     alert (" # ")
+// } else if (y===4) {
+//     alert ("$")
+// } else if (y===5) {
+//     alert ("%")
+// } else if (y===6) {
+//     alert ("^")
+// } else if (y===7) {
+//     alert ("&")
+// } else if (y===8) {
+//     alert (" * ")
+// } else if (y===9) {
+//     alert ("(")
+// }   
+
+const z = "a"
+const c = "a"
+const r = "a"
+
+
+
+let m = prompt("Введите трехзначное число")
+m = z, c, r
+if (z===c || c===r  || z===r) {
+    alert ("В числе есть одинаковые цифры")
+} else {
+    alert ("В числе нет одинаковых цифр")
 }
