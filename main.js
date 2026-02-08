@@ -74,48 +74,56 @@
 
 //Домашнее задание на 9.02
 
-// let x = +prompt ("Введите свой возраст");
-// if (x <= 11)  {
-//     alert ("Вы ребенок!")
-// } else if (x>=12 && x<18) {
-//     alert ("Вы подросток!")
-// } else if (x>=18 && x<60) {
-//     alert ("Вы взрослый!")
-// } else if (x>=60) {
-//     alert ("Вы пенсионер!")
-// }
-
-// let y = +prompt ("Введите число от 0 до 9");
-// if (y===0)  {
-//     alert (" ) ")
-// }  else if (y===2) {
-//     alert (" @ ")
-// } else if (y===3) {
-//     alert (" # ")
-// } else if (y===4) {
-//     alert ("$")
-// } else if (y===5) {
-//     alert ("%")
-// } else if (y===6) {
-//     alert ("^")
-// } else if (y===7) {
-//     alert ("&")
-// } else if (y===8) {
-//     alert (" * ")
-// } else if (y===9) {
-//     alert ("(")
-// }   
-
-const z = "a"
-const c = "a"
-const r = "a"
-
-
-
-let m = prompt("Введите трехзначное число")
-m = z, c, r
-if (z===c || c===r  || z===r) {
-    alert ("В числе есть одинаковые цифры")
-} else {
-    alert ("В числе нет одинаковых цифр")
+let x = +prompt ("Введите свой возраст");
+if (x <= 11)  {
+    alert ("Вы ребенок!")
+} else if (x>=12 && x<18) {
+    alert ("Вы подросток!")
+} else if (x>=18 && x<60) {
+    alert ("Вы взрослый!")
+} else if (x>=60) {
+    alert ("Вы пенсионер!")
 }
+
+let y = +prompt ("Введите число от 0 до 9");
+if (y===0)  {
+    alert (" ) ")
+}  else if (y===2) {
+    alert (" @ ")
+} else if (y===3) {
+    alert (" # ")
+} else if (y===4) {
+    alert ("$")
+} else if (y===5) {
+    alert ("%")
+} else if (y===6) {
+    alert ("^")
+} else if (y===7) {
+    alert ("&")
+} else if (y===8) {
+    alert (" * ")
+} else if (y===9) {
+    alert ("(")
+}  
+
+
+
+let m = prompt("Введите трехзначное число");
+m === ("z"+"c"+"r")
+if ("z"==="c" || "c"==="r"  || "z"==="r") {
+    alert ("В числе есть одинаковые цифры");
+} else {
+    alert ("В числе нет одинаковых цифр");
+}
+
+
+let godV = +prompt("Введите год");
+if (godV % 400 === 0 || godV % 4 === 0 && godV%100 !== 0) {
+    alert ("Високосный год")
+} else {
+    alert ("Невисокосный год")
+}
+
+
+
+
