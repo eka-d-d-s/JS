@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 // console.log("Привет мир");
 // let x = "Привет мир!!!";
 // console.log(x)
@@ -144,6 +145,8 @@ if (godV % 400 === 0 || godV % 4 === 0 && godV%100 !== 0) {
 
 
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
