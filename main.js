@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 // console.log("Привет мир");
 // let x = "Привет мир!!!";
 // console.log(x)
@@ -142,7 +139,6 @@
 //     }
 // }
 // console.log(chisla(6,4))
-
 let num = 100;
 
 console.log(+num.toString(2))
@@ -196,55 +192,150 @@ while (numnew > 0) {
 alert(`Количество цифр ` &{i})
 
 // Задача 3.  rjkbxtcndj j,ob[ ltkbntktq]
-let numNew= +prompt("Введите число");
-let counter = 0;
-for (let i = 1; i<= numNew; i++) {
 
-    if (numNew % i === 0) {
-        counter++
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Дом задание на 11.02
+
+// 1. Подсчитать сумму всех чисел в заданном пользователем диапазоне. 
+
+
+     
+// 2. Запросить 2 числа и найти только наибольший общий делитель. 
+
+
+// 3. Запросить у пользователя число и вывести все делители этого числа  
+let numnew = +prompt("Введите число")
+let counter = 0
+for (let i = 1; i<= numnew; i++) {
+   if (numnew % i ===0) {
+      counter++
+   }
 }
-alert(`Количество делителей &{counter}`)
+alert (`Количество делителей` &{counter})
 
-let x = +prompt("Введите число");
-let i = 0;
-while (i < x) {
-    console.log ("Hello" + i);
-    i++
-}
 
-// Задача. Создать функцию, который возвращает массив целых чисел 
-// от n до 1, где n>0
-const reverseSeq = (n) => {
-    let arr = [];
-    for (let i = 0; i < n; i++) {
-        arr.push(n - i)
-    }
-    return arr;
+// 4. Определить количество цифр в введенном числе.
+//  let numnew = +prompt("Введите число");
+//  let i = 0
+//  while (numnew>0) {
+//     numnew = Math.floor(numnew/10);
+//     console.log(numnew)
+//     i++
+//  }
+// alert(`Количество цифр` &{i})
 
-};
-console.log(reverseSeq(5))
-console.log(reverseSeq(-5))
 
-// Задача . Напишите функцию вывести строку s столько раз сколько указал в n
- // 6, "I" => "IIIIII"
- // 1 ВАРИАНТ РЕШЕНИЯ 
-function repeatStr (n, s) {
-    let str = "";
-    for (let i= 0; i < n; i++) {
-        str = str + s
-    }
-    return str;
 
-}
-console.log(repeatStr(2, "Na"))
 
-//2 ВАРИАНТ РЕШГЕНИЯ  repeat(n) -дублирует строку n раз
-function repeatStr (n, s) {
-     return s.repeat(n)
-}
-console.log(repeatStr(2, "Na"))
 
-// 3 ВАРИАНТ РЕШЕНИЯ
-function repeatStr (n, s) => s.repeat (n)
-console.log(repeatStr(2, "Na"))
+
+
