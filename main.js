@@ -130,7 +130,7 @@
 // задание 4
 
 
-// const chisla = (a, b) => {
+// let chisla = (a, b) => {
 //     if (a < b) {
 //         return -1
 //     }
@@ -206,6 +206,12 @@ for (let i = 1; i<= numNew; i++) {
 }
 alert(`Количество делителей &{counter}`)
 
+let x = +prompt("Введите число");
+let i = 0;
+while (i < x) {
+    console.log ("Hello" + i);
+    i++
+}
 
 // Задача. Создать функцию, который возвращает массив целых чисел 
 // от n до 1, где n>0
