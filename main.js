@@ -198,7 +198,8 @@
 
 
      
-// 2. Запросить 2 числа и найти только наибольший общий делитель. 
+// 2. Запросить 2 числа и найти только наибольший общий делитель.
+ 
 
 
 // 3. Запросить у пользователя число и вывести все делители этого числа  
@@ -213,19 +214,83 @@
 
 
 // 4. Определить количество цифр в введенном числе.
- let numnew = + prompt("Введите число");
- let i = 0
- while (numnew > 0) {
-    numnew = Math.floor(numnew / 10);
-    console.log(numnew)
-    i++
- }
-alert(`Количество цифр` &{i})
+//  let numnew = + prompt("Введите число");
+//  let i = 0
+//  while (numnew > 0) {
+//     numnew = Math.floor(numnew / 10);
+//     console.log(numnew)
+//     i++
+//  };
+// alert(`Количество цифр` &{i})
+
+
+ // ДЗ. Обьекты 
+ // 1.
+//  let car = {
+//    brand: "Opel",
+//    model: "Vectra",
+//    year: 2025,
+//  };
+//  console.log("У меня есть", car.brand, car.model, car.year,"года выпуска")
+
+//2.
+// const product = {
+//    name: "Футболка",
+//    price: 1500,
+//    quantity: 10
+  
+// };
+
+// console.log(totalPrice = product.price * product.quantity)
+
+//3.
+// let rectangle = {
+//    width: 8,
+//    height: 5,
+// };
+// rectangle.area = rectangle.width * rectangle.height;
+// console.log(rectangle.area)
+
+//4.
+// let item = {
+//    price: 50,
+//    discount: 20,
+// }
+// item.finalPrice = item.price - (item.price * item.discount / 100)
+// console.log(item)
+
+//ДЗ Массивы
+//1.
+
+// let queue = ['Иван', 'Мария', 'Петр'];
+// queue.push( 'Анна');
+// queue.shift();
+// queue.unshift("Олег");
+// console.log(queue, queue.length);
+
+//2.
+// let callStack = [];
+// callStack.unshift('login');
+// callStack.unshift('validate');
+// callStack.unshift('save');
+// callStack.shift();
+// callStack.shift();
+// console.log(callStack);
 
 
 
+//3.
+// let busStop = ['Анна', "Борис"];
+// busStop.push( 'Виктор', 'Галина');
+// busStop.shift();
+// busStop.length = 0;
 
+// console.log(busStop, "Автобус уехал. Пассажиров: 0")
 
-
-
-
+//4.
+let shoppingList = ['хлеб', 'молоко'];
+shoppingList.push('яйца');
+shoppingList.unshift("масло");
+shoppingList.pop();
+shoppingList.shift();
+console.log(shoppingList);
