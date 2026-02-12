@@ -139,168 +139,57 @@
 //     }
 // }
 // console.log(chisla(6,4))
-let num = 100;
+// let num = 100;
 
-console.log(+num.toString(2))
-let string = "42px"
-console.log(+string)//NoN
-console.log(parseInt(string)) //компонент  преобразует строку в число обрезая в текст, возвращает только первое число
-console.log(parseFloat(string)) //вернет дробное значение на первой точке
+// console.log(+num.toString(2))
+// let string = "42px"
+// console.log(+string)//NoN
+// console.log(parseInt(string)) //компонент  преобразует строку в число обрезая в текст, возвращает только первое число
+// console.log(parseFloat(string)) //вернет дробное значение на первой точке
 
-let string = "4254";
-console.log(string.length) // показывает кол-во символов Длина строки
-console.log(string[string.length-1])// выводим последний элемент строки
-console.log(string.charAt(10)) // выводим последний элемент строки
+// let string = "4254";
+// console.log(string.length) // показывает кол-во символов Длина строки
+// console.log(string[string.length-1])// выводим последний элемент строки
+// console.log(string.charAt(10)) // выводим последний элемент строки
 
-//  for(let char of string) { 
-//     console.log(char)
-//  }
-string[0] = "H"
-console.log(string)
-console.log(string.toUpperCase());// переводит все буквы в верхний регистр
-console.log(string.toLowerCase());// переводит все буквы в нижний регистр
+// //  for(let char of string) { 
+// //     console.log(char)
+// //  }
+// string[0] = "H"
+// console.log(string)
+// console.log(string.toUpperCase());// переводит все буквы в верхний регистр
+// console.log(string.toLowerCase());// переводит все буквы в нижний регистр
  
-// Задача/   имя должно быть с большой группой
-const name = "наСтЯ";
-function hello (str) {
- return str [0].toUpperCase() + str.substr(1, str.length - 1).toLowerCase();
+// // Задача/   имя должно быть с большой группой
+// const name = "наСтЯ";
+// function hello (str) {
+//  return str [0].toUpperCase() + str.substr(1, str.length - 1).toLowerCase();
 
-}
+// }
 
-// Метод 1
-// Настя
-console.log(name.substr(1, 2)); // ac  Начало и количество символов
+// // Метод 1
+// // Настя
+// console.log(name.substr(1, 2)); // ac  Начало и количество символов
 
-// Метод 2
-console.log(name.slice(1, 4)); // аст   начало конец, если вместо 1 используем -1 - с конца начинаем
+// // Метод 2
+// console.log(name.slice(1, 4)); // аст   начало конец, если вместо 1 используем -1 - с конца начинаем
 
-// Метод 3
-console.log(name.substring(1, 4)); // аст  начало конец
+// // Метод 3
+// console.log(name.substring(1, 4)); // аст  начало конец
 
 // Задача 4.  дом номер 4 Определить кол-во цифр в введенном числе 
 // легкий способ 
 // let numnew = prompt ("Введите число");
 // console.log(numnew.length)
 // правильный способ решение чз вайл
-let numnew = +prompt ("Введите число");
-let i = 0
-while (numnew > 0) {
-    numnew = Math.floor(numnew / 10);
-    console.log(numnew)
-    i++
-}
-alert(`Количество цифр ` &{i})
-
-// Задача 3.  rjkbxtcndj j,ob[ ltkbntktq]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// let numnew = +prompt ("Введите число");
+// let i = 0
+// while (numnew > 0) {
+//     numnew = Math.floor(numnew / 10);
+//     console.log(numnew)
+//     i++
+// }
+// alert(`Количество цифр ` &{i})
 
 
 // Дом задание на 11.02
@@ -313,25 +202,26 @@ alert(`Количество цифр ` &{i})
 
 
 // 3. Запросить у пользователя число и вывести все делители этого числа  
-let numnew = +prompt("Введите число")
-let counter = 0
-for (let i = 1; i<= numnew; i++) {
-   if (numnew % i ===0) {
-      counter++
-   }
-}
-alert (`Количество делителей` &{counter})
+// let numNew = + prompt("Введите число");
+// let counter = 0;
+// for (let i = 1; i<= numNew; i++) {   
+//    if (numNew % i === 0) {
+//       counter++
+//    }
+// }
+// alert (`Количество делителей` &{counter})
 
 
 // 4. Определить количество цифр в введенном числе.
-//  let numnew = +prompt("Введите число");
-//  let i = 0
-//  while (numnew>0) {
-//     numnew = Math.floor(numnew/10);
-//     console.log(numnew)
-//     i++
-//  }
-// alert(`Количество цифр` &{i})
+ let numnew = + prompt("Введите число");
+ let i = 0
+ while (numnew > 0) {
+    numnew = Math.floor(numnew / 10);
+    console.log(numnew)
+    i++
+ }
+alert(`Количество цифр` &{i})
+
 
 
 
