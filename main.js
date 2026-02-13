@@ -190,102 +190,186 @@
 //     i++
 // }
 // alert(`Количество цифр ` &{i})
+// ДЗ
 
 
-// Дом задание на 11.02
+// Дом задание на 11.02 
+// WHILE, DO WHILE или FOR.
+//1.
+function sumChisel(pchislo, vchislo) {
+if (pchislo > vchislo) {
+    console.log("Ошибка: начало диапазона должно быть меньше конца");
+    return
+};
+let sum = 0;
+for (let i = pchislo; i<= vchislo; i++) {
+    sum+=i;
+}
+    return sum;
+};
+const pchislo = 1;
+const vchislo = 5;
+const result = sumChisel(pchislo, vchislo);
+console.log(`${result}`)
 
-// 1. Подсчитать сумму всех чисел в заданном пользователем диапазоне. 
+//2.
+function nod(x, y) {
+    let big = Math.max(x, y);
+    let little = Math.min(x, y)
+    while (little > 0) {
+        let ostatok = big % little;
+        big = little;
+        little = ostatok;
+    }
+    return big;
+};
+
+console.log(`Наибольшмий общий делитель равен ${nod(25, 100)}`); 
 
 
-     
-// 2. Запросить 2 числа и найти только наибольший общий делитель.
- 
+//3.
+let chislo = +prompt("Введите число");
+for (let i= 1; i<= chislo; i++) {
+    if (chislo % i ===0) {
+        console.log(i)
+
+    }
+};
+console.log(`Делители числа ${chislo}`);
 
 
-// 3. Запросить у пользователя число и вывести все делители этого числа  
-// let numNew = + prompt("Введите число");
-// let counter = 0;
-// for (let i = 1; i<= numNew; i++) {   
-//    if (numNew % i === 0) {
-//       counter++
-//    }
-// }
-// alert (`Количество делителей` &{counter})
+4.
+let numnew = prompt ("Введите число");
+console.log(numnew.length)
 
 
-// 4. Определить количество цифр в введенном числе.
-//  let numnew = + prompt("Введите число");
-//  let i = 0
-//  while (numnew > 0) {
-//     numnew = Math.floor(numnew / 10);
-//     console.log(numnew)
-//     i++
-//  };
-// alert(`Количество цифр` &{i})
+// ДЗ на 11.02
+// Функции
+
+//1.
+function luboeChislo(x, y) {
+    if (x<y) {
+        return -1;
+    }
+    else if (x>y) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+console.log(luboeChislo(7,9));
+console.log(luboeChislo(15,9));
+console.log(luboeChislo(7,7));
+
+
+//2.
+function factorial(x) {
+    if (x===0) {
+        return 1;
+    }
+    let result = 1;
+    for (let i = 1; i<=x; i++) {
+        result*=i
+    }
+    return result;
+};
+console.log(factorial(7));
+
+
+//3.
+function createChislo() {
+   let x = prompt("Введите первое число");
+   let y = prompt("Введите второе число");
+   let b = prompt("Введите третье число");
+   let pchislo = x + y + b;
+   alert (`Полученное число`+pchislo)
+};
+
+
+
+//4.
+function ploshad(x, y) {
+    if (y!=0) {
+        return x*y
+    };
+    if (y===NaN) {
+        return x*x
+    }
+   
+};
+console.log(`${ploshad(50,50)}`)
+
+
+
+
+
+
+
 
 
  // ДЗ. Обьекты 
  // 1.
-//  let car = {
-//    brand: "Opel",
-//    model: "Vectra",
-//    year: 2025,
-//  };
-//  console.log("У меня есть", car.brand, car.model, car.year,"года выпуска")
+ let car = {
+   brand: "Opel",
+   model: "Vectra",
+   year: 2025,
+ };
+ console.log("У меня есть", car.brand, car.model, car.year,"года выпуска")
 
 //2.
-// const product = {
-//    name: "Футболка",
-//    price: 1500,
-//    quantity: 10
+const product = {
+   name: "Футболка",
+   price: 1500,
+   quantity: 10
   
-// };
+};
 
-// console.log(totalPrice = product.price * product.quantity)
+console.log(totalPrice = product.price * product.quantity)
 
 //3.
-// let rectangle = {
-//    width: 8,
-//    height: 5,
-// };
-// rectangle.area = rectangle.width * rectangle.height;
-// console.log(rectangle.area)
+let rectangle = {
+   width: 8,
+   height: 5,
+};
+rectangle.area = rectangle.width * rectangle.height;
+console.log(rectangle.area)
 
 //4.
-// let item = {
-//    price: 50,
-//    discount: 20,
-// }
-// item.finalPrice = item.price - (item.price * item.discount / 100)
-// console.log(item)
+let item = {
+   price: 50,
+   discount: 20,
+}
+item.finalPrice = item.price - (item.price * item.discount / 100)
+console.log(item)
 
 //ДЗ Массивы
 //1.
 
-// let queue = ['Иван', 'Мария', 'Петр'];
-// queue.push( 'Анна');
-// queue.shift();
-// queue.unshift("Олег");
-// console.log(queue, queue.length);
+let queue = ['Иван', 'Мария', 'Петр'];
+queue.push( 'Анна');
+queue.shift();
+queue.unshift("Олег");
+console.log(queue, queue.length);
 
 //2.
-// let callStack = [];
-// callStack.unshift('login');
-// callStack.unshift('validate');
-// callStack.unshift('save');
-// callStack.shift();
-// callStack.shift();
-// console.log(callStack);
+let callStack = [];
+callStack.unshift('login');
+callStack.unshift('validate');
+callStack.unshift('save');
+callStack.shift();
+callStack.shift();
+console.log(callStack);
 
 
 
 //3.
-// let busStop = ['Анна', "Борис"];
-// busStop.push( 'Виктор', 'Галина');
-// busStop.shift();
-// busStop.length = 0;
+let busStop = ['Анна', "Борис"];
+busStop.push( 'Виктор', 'Галина');
+busStop.shift();
+busStop.length = 0;
 
-// console.log(busStop, "Автобус уехал. Пассажиров: 0")
+console.log(busStop, "Автобус уехал. Пассажиров: 0")
 
 //4.
 let shoppingList = ['хлеб', 'молоко'];
