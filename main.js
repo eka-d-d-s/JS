@@ -428,3 +428,177 @@
 // const number = 18;
 // const factors = mnChisla(number);
 // console.log(`${factors}`);
+
+//ДЗ на 2.03
+//Задание 1
+//Создать объект, описывающий автомобиль (производитель,
+//модель, год выпуска, средняя скорость), и следующие функции
+//для работы с этим объектом.
+//1. Функция для вывода на экран информации об автомобиле.
+//2. Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью.
+//Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.
+// const car = {
+//     manufacturer: "Toyota",    
+//     model: "Camry",            
+//     year: 2020,               
+//     averageSpeed: 90,        
+//     showInfo: function() {
+//         return `Автомобиль: ${this.manufacturer} ${this.model}` +
+//                `\nГод выпуска: ${this.year}` +
+//                `\nСредняя скорость: ${this.averageSpeed} км/ч`;
+//     },
+//     calculateTravelTime: function(distance) {
+//               if (distance <= 0) {
+//             return "Расстояние должно быть положительным числом";
+//         }
+//         const baseTime = distance / this.averageSpeed;
+        
+        
+//         const hours = Math.floor(baseTime);
+//         const minutes = (baseTime - hours) * 60;
+//         let totalTime = hours * 60 + minutes;
+        
+        
+//         for (let i = 4; i <= totalTime; i += 4) {
+//             totalTime += 60;
+//         }
+        
+//         return {
+//             totalHours: Math.floor(totalTime / 60),
+//             totalMinutes: totalTime % 60
+//         };
+//     }
+// };
+// console.log(car.showInfo());
+// const travelTime = car.calculateTravelTime(300);
+// console.log(`Время в пути: ${travelTime.totalHours} часов ${travelTime.totalMinutes} минут`);
+
+//Задание 2
+//Создать объект, хранящий в себе отдельно числитель и зна-
+//менатель дроби, и следующие функции для работы с этим объ-
+//ектом.
+//1. Функция сложения 2-х объектов-дробей.
+//2. Функция вычитания 2-х объектов-дробей.
+//3. Функция умножения 2-х объектов-дробей.
+//4. Функция деления 2-х объектов-дробей.
+//5. Функция сокращения объекта-дроби.
+
+// 1. Функция сложения 2-х объектов-дробей */
+// function addition(fractA, fractB) {
+//     return reduction({
+//         num: (fractA.num * fractB.denom) + (fractB.num * fractA.denom),
+//         denom: fractA.denom * fractB.denom
+//     });
+// };
+
+// // 2. Функция вычитания 2-х объектов-дробей */
+// function subtraction(fractA, fractB) {
+//     return reduction({
+//         num: (fractA.num * fractB.denom) - (fractB.num * fractA.denom),
+//         denom: fractA.denom * fractB.denom
+//     });
+// };
+
+// // 3. Функция умножения 2-х объектов-дробей */
+// function multiplication(fractA, fractB) {
+//     return reduction({
+//         num: fractA.num * fractB.num,
+//         denom: fractA.denom * fractB.denom
+//     });
+// };
+
+// // 4. Функция деления 2-х объектов-дробей */
+// function division(fractA, fractB) {
+//     return reduction({
+//         num: fractA.num * fractB.denom,
+//         denom: fractA.denom * fractB.num
+//     });
+// };
+
+// //5. Функция сокращения объекта-дроби */
+// function reduction(fact) {
+//     let resOne;
+//     let resTwo;
+//     for (let i = 1; i < fact.num + fact.denom; ++i) {
+//         if (fact.num % i == 0 && fact.denom % i == 0) {
+//             resOne = fact.num / i;
+//             resTwo = fact.denom / i;
+//         } else if (fact.num == fact.denom) {
+//             resOne = 1;
+//             resTwo = 1;
+//         }
+//     }
+//     return {
+//         num: resOne,
+//         denom: resTwo
+//     }
+// };
+//     let fractOne = { num: 3, denom: 6 };
+//     let fractTwo = { num: 2, denom: 5 };
+//     console.log(addition(fractOne, fractTwo));
+//     console.log(subtraction(fractOne, fractTwo));
+//     console.log(multiplication(fractOne, fractTwo));
+//     console.log(division(fractOne, fractTwo));
+
+//Задание 3
+//Создать объект, описывающий время (часы, минуты, секун-
+//ды), и следующие функции для работы с этим объектом.
+//1. Функция вывода времени на экран.
+//. Функция изменения времени на переданное количество
+//секунд.
+//3. Функция изменения времени на переданное количество
+//минут.
+//4. Функция изменения времени на переданное количество
+//часов.
+
+const time = {
+    init: function(hours, minutes, seconds) {
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+    },    
+    showTime: function() {
+        return `${this.hours}:${this.minutes.toString().padStart(2, '0')}:${this.seconds.toString().padStart(2, '0')}`;
+    },
+     addSeconds: function(seconds) {
+            this.seconds += seconds;
+         if (this.seconds >= 60) {
+            this.seconds -= 60;
+            this.minutes++;
+        }
+        if (this.minutes >= 60) {
+            this.minutes -= 60;
+            this.hours++;
+        }
+        if (this.hours >= 24) {
+            this.hours = 0;
+        }
+    },
+    addMinutes: function(minutes) {
+        this.minutes += minutes;
+        if (this.minutes >= 60) {
+            this.minutes -= 60;
+            this.hours++;
+        }
+        if (this.hours >= 24) {
+            this.hours = 0;
+        }
+    },
+    addHours: function(hours) {
+            this.hours += hours;
+        if (this.hours >= 24) {
+            this.hours = 0;
+            this.minutes = 0;
+            this.seconds = 0;
+        }
+    }
+};
+
+time.init(12, 0, 0);
+console.log(time.showTime());
+time.addSeconds(360);
+console.log(time.showTime());
+time.addMinutes(15);
+console.log(time.showTime());
+time.addHours(2);
+console.log(time.showTime());
