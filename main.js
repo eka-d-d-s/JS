@@ -196,109 +196,109 @@
 // Дом задание на 11.02 
 // WHILE, DO WHILE или FOR.
 //1.
-function sumChisel(pchislo, vchislo) {
-if (pchislo > vchislo) {
-    console.log("Ошибка: начало диапазона должно быть меньше конца");
-    return
-};
-let sum = 0;
-for (let i = pchislo; i<= vchislo; i++) {
-    sum+=i;
-}
-    return sum;
-};
-const pchislo = 1;
-const vchislo = 5;
-const result = sumChisel(pchislo, vchislo);
-console.log(`${result}`)
+// function sumChisel(pchislo, vchislo) {
+// if (pchislo > vchislo) {
+//     console.log("Ошибка: начало диапазона должно быть меньше конца");
+//     return
+// };
+// let sum = 0;
+// for (let i = pchislo; i<= vchislo; i++) {
+//     sum+=i;
+// }
+//     return sum;
+// };
+// const pchislo = 1;
+// const vchislo = 5;
+// const result = sumChisel(pchislo, vchislo);
+// console.log(`${result}`)
 
-//2.
-function nod(x, y) {
-    let big = Math.max(x, y);
-    let little = Math.min(x, y)
-    while (little > 0) {
-        let ostatok = big % little;
-        big = little;
-        little = ostatok;
-    }
-    return big;
-};
+// //2.
+// function nod(x, y) {
+//     let big = Math.max(x, y);
+//     let little = Math.min(x, y)
+//     while (little > 0) {
+//         let ostatok = big % little;
+//         big = little;
+//         little = ostatok;
+//     }
+//     return big;
+// };
 
-console.log(`Наибольшмий общий делитель равен ${nod(25, 100)}`); 
-
-
-//3.
-let chislo = +prompt("Введите число");
-for (let i= 1; i<= chislo; i++) {
-    if (chislo % i ===0) {
-        console.log(i)
-
-    }
-};
-console.log(`Делители числа ${chislo}`);
+// console.log(`Наибольшмий общий делитель равен ${nod(25, 100)}`); 
 
 
-4.
-let numnew = prompt ("Введите число");
-console.log(numnew.length)
+// //3.
+// let chislo = +prompt("Введите число");
+// for (let i= 1; i<= chislo; i++) {
+//     if (chislo % i ===0) {
+//         console.log(i)
+
+//     }
+// };
+// console.log(`Делители числа ${chislo}`);
 
 
-// ДЗ на 11.02
-// Функции
-
-//1.
-function luboeChislo(x, y) {
-    if (x<y) {
-        return -1;
-    }
-    else if (x>y) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
-}
-console.log(luboeChislo(7,9));
-console.log(luboeChislo(15,9));
-console.log(luboeChislo(7,7));
+// 4.
+// let numnew = prompt ("Введите число");
+// console.log(numnew.length)
 
 
-//2.
-function factorial(x) {
-    if (x===0) {
-        return 1;
-    }
-    let result = 1;
-    for (let i = 1; i<=x; i++) {
-        result*=i
-    }
-    return result;
-};
-console.log(factorial(7));
+// // ДЗ на 11.02
+// // Функции
+
+// //1.
+// function luboeChislo(x, y) {
+//     if (x<y) {
+//         return -1;
+//     }
+//     else if (x>y) {
+//         return 1;
+//     }
+//     else {
+//         return 0;
+//     }
+// }
+// console.log(luboeChislo(7,9));
+// console.log(luboeChislo(15,9));
+// console.log(luboeChislo(7,7));
 
 
-//3.
-function createChislo() {
-   let x = prompt("Введите первое число");
-   let y = prompt("Введите второе число");
-   let b = prompt("Введите третье число");
-   let pchislo = x + y + b;
-   alert (`Полученное число`+pchislo)
-};
+// //2.
+// function factorial(x) {
+//     if (x===0) {
+//         return 1;
+//     }
+//     let result = 1;
+//     for (let i = 1; i<=x; i++) {
+//         result*=i
+//     }
+//     return result;
+// };
+// console.log(factorial(7));
+
+
+// //3.
+// function createChislo() {
+//    let x = prompt("Введите первое число");
+//    let y = prompt("Введите второе число");
+//    let b = prompt("Введите третье число");
+//    let pchislo = x + y + b;
+//    alert (`Полученное число`+pchislo)
+// };
 
 
 
-//4.
-function ploshad(x, y) {
-    if (y!=0) {
-        return x*y
-    };
-    if (y===NaN) {
-        return x*x
-    }
+// //4.
+// function ploshad(x, y) {
+//     if (y!=0) {
+//         return x*y
+//     };
+//     if (y===NaN) {
+//         return x*x
+//     }
    
-};
-console.log(`${ploshad(50,50)}`)
+// };
+// console.log(`${ploshad(50,50)}`)
 
 
 
@@ -308,73 +308,123 @@ console.log(`${ploshad(50,50)}`)
 
 
 
- // ДЗ. Обьекты 
- // 1.
- let car = {
-   brand: "Opel",
-   model: "Vectra",
-   year: 2025,
- };
- console.log("У меня есть", car.brand, car.model, car.year,"года выпуска")
+//  // ДЗ. Обьекты 
+//  // 1.
+//  let car = {
+//    brand: "Opel",
+//    model: "Vectra",
+//    year: 2025,
+//  };
+//  console.log("У меня есть", car.brand, car.model, car.year,"года выпуска")
 
-//2.
-const product = {
-   name: "Футболка",
-   price: 1500,
-   quantity: 10
+// //2.
+// const product = {
+//    name: "Футболка",
+//    price: 1500,
+//    quantity: 10
   
-};
+// };
 
-console.log(totalPrice = product.price * product.quantity)
+// console.log(totalPrice = product.price * product.quantity)
 
-//3.
-let rectangle = {
-   width: 8,
-   height: 5,
-};
-rectangle.area = rectangle.width * rectangle.height;
-console.log(rectangle.area)
+// //3.
+// let rectangle = {
+//    width: 8,
+//    height: 5,
+// };
+// rectangle.area = rectangle.width * rectangle.height;
+// console.log(rectangle.area)
 
-//4.
-let item = {
-   price: 50,
-   discount: 20,
-}
-item.finalPrice = item.price - (item.price * item.discount / 100)
-console.log(item)
+// //4.
+// let item = {
+//    price: 50,
+//    discount: 20,
+// }
+// item.finalPrice = item.price - (item.price * item.discount / 100)
+// console.log(item)
 
-//ДЗ Массивы
-//1.
+// //ДЗ Массивы
+// //1.
 
-let queue = ['Иван', 'Мария', 'Петр'];
-queue.push( 'Анна');
-queue.shift();
-queue.unshift("Олег");
-console.log(queue, queue.length);
+// let queue = ['Иван', 'Мария', 'Петр'];
+// queue.push( 'Анна');
+// queue.shift();
+// queue.unshift("Олег");
+// console.log(queue, queue.length);
 
-//2.
-let callStack = [];
-callStack.unshift('login');
-callStack.unshift('validate');
-callStack.unshift('save');
-callStack.shift();
-callStack.shift();
-console.log(callStack);
+// //2.
+// let callStack = [];
+// callStack.unshift('login');
+// callStack.unshift('validate');
+// callStack.unshift('save');
+// callStack.shift();
+// callStack.shift();
+// console.log(callStack);
 
 
 
-//3.
-let busStop = ['Анна', "Борис"];
-busStop.push( 'Виктор', 'Галина');
-busStop.shift();
-busStop.length = 0;
+// //3.
+// let busStop = ['Анна', "Борис"];
+// busStop.push( 'Виктор', 'Галина');
+// busStop.shift();
+// busStop.length = 0;
 
-console.log(busStop, "Автобус уехал. Пассажиров: 0")
+// console.log(busStop, "Автобус уехал. Пассажиров: 0")
 
-//4.
-let shoppingList = ['хлеб', 'молоко'];
-shoppingList.push('яйца');
-shoppingList.unshift("масло");
-shoppingList.pop();
-shoppingList.shift();
-console.log(shoppingList);
+// //4.
+// let shoppingList = ['хлеб', 'молоко'];
+// shoppingList.push('яйца');
+// shoppingList.unshift("масло");
+// shoppingList.pop();
+// shoppingList.shift();
+// console.log(shoppingList);
+
+//1. Написать функцию возведения числа в степень.
+// function power(a, b) {
+//     if (b === 0) {
+//         return 1;
+//     }
+//     return a* power(a,b-1);
+// };
+// console.log(power(4,5));
+
+//2. Написать функцию поиска наибольшего общего делителя.
+// function nod(a, b) {
+//     if (b === 0){
+//         return a;
+//     }
+//     return nod(b, a%b)
+// };
+// console.log(nod(15,5));
+
+//3. Написатьфункцию для поиска максимальной цифры в числе.
+
+//4. Написать функцию, которая определяет простое ли переданное число.
+// function isPrime(a){
+//     if (a<=1) {
+//         return "Переданное число"
+//     };
+//     if (a===2) {
+//         return "Простое число"
+//     };
+//     if (a%2===0) {
+//         return "Переданное число"
+//     };
+//     return isPrime(a-2)
+// }
+// console.log(isPrime(7));
+
+// 5. Написать функцию для вывода всех множителей переданного числа в возрастающем порядке.
+// Например: число 18 – множители 2 * 3 * 3.
+
+// function mnChisla(a, bol = 1) {
+//     if(a <= 1) return;
+//     if (a % bol === 0) {
+//         return [bol].concat(mnChisla(a, bol+1));
+//     };
+//    return mnChisla(a, bol+1);
+     
+// };
+// const number = 18;
+// const factors = mnChisla(number);
+// console.log(`${factors}`);
