@@ -551,54 +551,62 @@
 //4. Функция изменения времени на переданное количество
 //часов.
 
-const time = {
-    init: function(hours, minutes, seconds) {
-        this.hours = hours;
-        this.minutes = minutes;
-        this.seconds = seconds;
-    },    
-    showTime: function() {
-        return `${this.hours}:${this.minutes.toString().padStart(2, '0')}:${this.seconds.toString().padStart(2, '0')}`;
-    },
-     addSeconds: function(seconds) {
-            this.seconds += seconds;
-         if (this.seconds >= 60) {
-            this.seconds -= 60;
-            this.minutes++;
-        }
-        if (this.minutes >= 60) {
-            this.minutes -= 60;
-            this.hours++;
-        }
-        if (this.hours >= 24) {
-            this.hours = 0;
-        }
-    },
-    addMinutes: function(minutes) {
-        this.minutes += minutes;
-        if (this.minutes >= 60) {
-            this.minutes -= 60;
-            this.hours++;
-        }
-        if (this.hours >= 24) {
-            this.hours = 0;
-        }
-    },
-    addHours: function(hours) {
-            this.hours += hours;
-        if (this.hours >= 24) {
-            this.hours = 0;
-            this.minutes = 0;
-            this.seconds = 0;
-        }
-    }
-};
+// const time = {
+//     init: function(hours, minutes, seconds) {
+//         this.hours = hours;
+//         this.minutes = minutes;
+//         this.seconds = seconds;
+//     },    
+//     showTime: function() {
+//         return `${this.hours}:${this.minutes.toString().padStart(2, '0')}:${this.seconds.toString().padStart(2, '0')}`;
+//     },
+//      addSeconds: function(seconds) {
+//             this.seconds += seconds;
+//          if (this.seconds >= 60) {
+//             this.seconds -= 60;
+//             this.minutes++;
+//         }
+//         if (this.minutes >= 60) {
+//             this.minutes -= 60;
+//             this.hours++;
+//         }
+//         if (this.hours >= 24) {
+//             this.hours = 0;
+//         }
+//     },
+//     addMinutes: function(minutes) {
+//         this.minutes += minutes;
+//         if (this.minutes >= 60) {
+//             this.minutes -= 60;
+//             this.hours++;
+//         }
+//         if (this.hours >= 24) {
+//             this.hours = 0;
+//         }
+//     },
+//     addHours: function(hours) {
+//             this.hours += hours;
+//         if (this.hours >= 24) {
+//             this.hours = 0;
+//             this.minutes = 0;
+//             this.seconds = 0;
+//         }
+//     }
+// };
 
-time.init(12, 0, 0);
-console.log(time.showTime());
-time.addSeconds(360);
-console.log(time.showTime());
-time.addMinutes(15);
-console.log(time.showTime());
-time.addHours(2);
-console.log(time.showTime());
+// time.init(12, 0, 0);
+// console.log(time.showTime());
+// time.addSeconds(360);
+// console.log(time.showTime());
+// time.addMinutes(15);
+// console.log(time.showTime());
+// time.addHours(2);
+// console.log(time.showTime());
+function invert[x] {
+  if(x>0) return -x ;
+  if (x<=0) return x;
+  
+}
+console.log(invert[1, 2, 3, 4, 5]);
+console.log(invert(1, -2, 3, -4, 5));
+console.log(invert(0));
