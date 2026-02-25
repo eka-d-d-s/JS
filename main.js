@@ -602,11 +602,20 @@
 // console.log(time.showTime());
 // time.addHours(2);
 // console.log(time.showTime());
-function invert[x] {
-  if(x>0) return -x ;
-  if (x<=0) return x;
-  
-}
-console.log(invert[1, 2, 3, 4, 5]);
-console.log(invert(1, -2, 3, -4, 5));
-console.log(invert(0));
+
+// class Book {
+//     constructor(title, author, year) {
+//         this.title = title;
+//         this.author = author;
+//         this. year = year;
+//     }
+//     read() {
+//         return (`Надо прочитать ${this.title} ${this.author} ${this. year}`)
+//     }
+// }
+// const ourBook = new Book ("Гарри поттер",'Дж.Роулинг',"1989");
+// console.log(ourBook.read());
+
+const start = new Date ("2026-01-25");
+const end = new Date ("2026-05-01");
+console.log((end-start)/(1000*60*60*24));
