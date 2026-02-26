@@ -616,6 +616,43 @@
 // const ourBook = new Book ("Гарри поттер",'Дж.Роулинг',"1989");
 // console.log(ourBook.read());
 
-const start = new Date ("2026-01-25");
-const end = new Date ("2026-05-01");
-console.log((end-start)/(1000*60*60*24));
+// const start = new Date ("2026-01-25");
+// const end = new Date ("2026-05-01");
+// console.log((end-start)/(1000*60*60*24));
+let chasi = document.querySelector(".chasi");
+timer();
+setInterval(timer,1000);
+function timer() {
+    let now = new Date();
+    let end = new Date(
+        now.getFullYear(),
+        5,
+        1,
+        0,
+        0,
+        0,
+        
+    );
+
+    let diff = Math.ceil((end-now) / 1000);
+    let days = Math.floor(diff / (60*60*24));
+    let diff1 = diff % (60*60*24);
+    
+    let hours = Math.floor(diff1/(60*60));
+    let diff2= diff1 % (60*60);
+
+    let minutes = Math.floor(diff2 / 60)
+    let diff3 = diff2 % 60;
+
+    let seconds = diff3;
+
+    chasi.innerHTML = addZero(days) + " " + addZero(hours) + ":" + addZero(minutes) + ":" +addZero(seconds);
+
+
+};
+ function addZero(num) {
+    if (num <= 9) {
+        num = "0" + num;
+    }
+    return num;
+ }
