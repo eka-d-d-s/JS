@@ -625,7 +625,7 @@ setInterval(timer,1000);
 function timer() {
     let now = new Date();
     let end = new Date(
-        now.getUTCFullYear(),
+        now.getFullYear(),
         5,
         1,
         0,
