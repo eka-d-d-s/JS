@@ -685,3 +685,35 @@ toDoList.addEventListener("click", (e) => {
         e.target.closest("li").remove();
     }
 });
+
+
+//Самостоятельная работа
+//1.
+// function splitEvenOdd(arr) {
+// let evenNumbers = [];
+// let oddNumbers = [];
+//  for (let i = 0; i < arr.length; i++) {
+//     if (arr[i]%2 === 0) {
+//         evenNumbers.push(arr[i]);
+//     }
+//     else {
+//         oddNumbers.push(arr[i]);
+//     }
+//  }
+//  return evenNumbers.concat(oddNumbers)
+// };
+// console.log(splitEvenOdd([1, 2, 3, 4, 5, 6]));
+// console.log(splitEvenOdd([3, 7, 1]));
+
+//2.
+
+// function averageOfArray(arr) {
+//     if (arr.Length === 0) {
+//  return 0;
+// };
+// let sum = arr((acc, num) => acc + num);
+// let average = sum / arr.Length;
+// return average.toFixed(2);
+// };
+// console.log(averageOfArray([10, 20, 30, 40]));
+// console.log(averageOfArray([1.5, 2.5, 3.5]));
