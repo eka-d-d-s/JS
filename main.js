@@ -663,28 +663,105 @@
 
 //Домашнее задание TO DO
 
-const parent = document.querySelector(".parent")
-const child = document.querySelector(".child")
+// const parent = document.querySelector(".parent")
+// const child = document.querySelector(".child")
 
-parent.addEventListener("click", () => {
-    console.log("Клик по child")
+// parent.addEventListener("click", () => {
+//     console.log("Клик по child")
+// });
+
+// const toDoList = document.querySelector(".to-do")
+// const addTaskBtn = document.querySelector(".add-task")
+
+// addTaskBtn.addEventListener("click", () => {
+//     const newLi = document.createElement("li");
+//     newLi.innerHTML = `Новая задача <button class="delete">x</button>`;
+//     toDoList.appendChild(newLi);
+// });
+
+// toDoList.addEventListener("click", (e) => {
+//     console.log(e.target);
+//     if(e.target.classList.contains("delete")) {
+//         e.target.closest("li").remove();
+//     }
+// });
+
+// Проект TODO
+
+const addTaskBtn = document.querySelector(".addTaskBtn");
+const taskInput = document.querySelector(".taskInput");
+const taskList = document.querySelector(".taskList");
+
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+const createTaskElement = (task, index) => {
+    const li = document.createElement("li");
+
+    const numberSpan = document.createElement("span");
+    numberSpan.classList.add("task-number");
+    numberSpan.textContent = index + 1;
+    li.appendChild(numberSpan);
+
+    const textSpan = document.createElement("span");
+    textSpan.classList.add("text-container");
+    textSpan.textContent = task.text;
+    li.appendChild(textSpan);
+
+    if (task.complete) {
+        li.classList.add("completed")
+    }
+
+    li.addEventListener("click", (event) => {
+        if (event.target.classList.contains("delete-btn")) {
+            return;
+        }
+
+        task.complete = !task.complete;
+        saveTasks();
 });
 
-const toDoList = document.querySelector(".to-do")
-const addTaskBtn = document.querySelector(".add-task")
+    const deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delete-btn");
+    deleteBtn.textContent = "Delete task";
+    deleteBtn.addEventListener("click", (evt) => {
+        evt.stopPropagation();
+        if (confirm ("Sure to delete this task?")) {
+            tasks.splice(index,1);
+            saveTasks
+        }
+    });
+    li.appendChild(deleteBtn);
+
+    return li
+}
+
+const loadTasks = ( ) => {
+    tasksList.innerHtml = "";
+    tasks.forEach((task, index) => {
+        tasksList.appendChild(createTaskElement(task, index))
+    });
+}
+
+const saveTasks = () => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    loadTasks();
+}
+
+loadTasks();
 
 addTaskBtn.addEventListener("click", () => {
-    const newLi = document.createElement("li");
-    newLi.innerHTML = `Новая задача <button class="delete">x</button>`;
-    toDoList.appendChild(newLi);
-});
-
-toDoList.addEventListener("click", (e) => {
-    console.log(e.target);
-    if(e.target.classList.contains("delete")) {
-        e.target.closest("li").remove();
+    const taskText = taskInput.value.trim();
+    if (taskText !== "") {
+        const newTask = {
+            text: taskText,
+            complete: false
+        }
+        tasks.push(newTask);
+        saveTasks();
+        taskInput.value = "";
     }
 });
+
 
 
 //Самостоятельная работа
@@ -717,3 +794,4 @@ toDoList.addEventListener("click", (e) => {
 // };
 // console.log(averageOfArray([10, 20, 30, 40]));
 // console.log(averageOfArray([1.5, 2.5, 3.5]));
+
