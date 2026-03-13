@@ -690,13 +690,13 @@
 
 const addTaskBtn = document.querySelector(".addTaskBtn");
 const taskInput = document.querySelector(".taskInput");
-const taskList = document.querySelector(".taskList");
+const taskList = document.querySelector(".taskList"); 
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 const createTaskElement = (task, index) => {
     const li = document.createElement("li");
-
+    
     const numberSpan = document.createElement("span");
     numberSpan.classList.add("task-number");
     numberSpan.textContent = index + 1;
@@ -708,44 +708,46 @@ const createTaskElement = (task, index) => {
     li.appendChild(textSpan);
 
     if (task.complete) {
-        li.classList.add("completed")
+        li.classList.add("completed");
     }
 
-    li.addEventListener("click", (event) => {
-        if (event.target.classList.contains("delete-btn")) {
-            return;
-        }
-
-        task.complete = !task.complete;
-        saveTasks();
-});
-
+   li.addEventListener("click", (event) => {
+    if (event.target.classList.contains("delete-btn")) return;
+    
+    task.complete = !task.complete;
+   
+    li.classList.toggle("completed"); 
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    });
+    
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete-btn");
     deleteBtn.textContent = "Delete task";
+    
     deleteBtn.addEventListener("click", (evt) => {
         evt.stopPropagation();
-        if (confirm ("Sure to delete this task?")) {
-            tasks.splice(index,1);
-            saveTasks
+        if (confirm("Sure to delete this task?")) {
+            tasks.splice(index, 1);
+            saveTasks(); 
         }
     });
+
     li.appendChild(deleteBtn);
+    return li;
+};
 
-    return li
-}
-
-const loadTasks = ( ) => {
-    tasksList.innerHtml = "";
+const loadTasks = () => {
+    taskList.innerHTML = ""; 
     tasks.forEach((task, index) => {
-        tasksList.appendChild(createTaskElement(task, index))
+        taskList.appendChild(createTaskElement(task, index));
     });
-}
+};
 
 const saveTasks = () => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
     loadTasks();
-}
+};
+
 
 loadTasks();
 
@@ -755,13 +757,12 @@ addTaskBtn.addEventListener("click", () => {
         const newTask = {
             text: taskText,
             complete: false
-        }
+        };
         tasks.push(newTask);
         saveTasks();
         taskInput.value = "";
     }
 });
-
 
 
 //Самостоятельная работа

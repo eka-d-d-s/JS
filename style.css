@@ -1,5 +1,17 @@
+body {
+    text-align: center;
+}
 .chasi {
     font-size: 80px;
     
    
 }
+ .taskList li {
+    list-style-type: none;
+    padding: 25px 10px;
+ }
+ 
+.text-container {
+    padding: 0 15px;
+}
+    
