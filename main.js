@@ -686,6 +686,13 @@
 //     }
 // });
 
+
+
+
+
+
+
+
 // Проект TODO
 
 const addTaskBtn = document.querySelector(".addTaskBtn");
@@ -765,6 +772,9 @@ addTaskBtn.addEventListener("click", () => {
 });
 
 
+
+
+
 //Самостоятельная работа
 //1.
 // function splitEvenOdd(arr) {
@@ -789,10 +799,20 @@ addTaskBtn.addEventListener("click", () => {
 //     if (arr.Length === 0) {
 //  return 0;
 // };
-// let sum = arr((acc, num) => acc + num);
-// let average = sum / arr.Length;
-// return average.toFixed(2);
+// let sum = arr.reduce((acc, num) => acc + num, 0);
+// let average = sum / arr.length;
+// return Math.round(average*100)/100;
 // };
 // console.log(averageOfArray([10, 20, 30, 40]));
 // console.log(averageOfArray([1.5, 2.5, 3.5]));
 
+//3 Цензура
+
+
+//  function censorWord(str, word) {
+//     const str = str.ToLowerCase();
+//     const word = word.ToLowerCase();
+//     const regax = new regax(word)
+//     return str.replace (regax, "[ЦЕНЗУРА]");
+//  }
+// censorWord("JavaScript это круто. Я люблю JavaScript!", "JavaScript");
