@@ -857,14 +857,76 @@
 
 //4.1 Таймер с уведомлением
 
-function delayMessage(message, delayMs, callback) {
- setTimeout(() => {
- console.log(message);
- callback();
-}, delayMs);
-};
-function callback() {
- console.log('Wellcome!');
+// function delayMessage(message, delayMs, callback) {
+//  setTimeout(() => {
+//  console.log(message);
+//  callback();
+// }, delayMs);
+// };
+// function callback() {
+//  console.log('Wellcome!');
+// }
+
+// delayMessage('Hello, world!', 5000, callback);  
+
+
+
+
+
+// JSON  функция fetch:
+
+// fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films/301', {
+//     method: 'GET',
+//     headers: {
+//         'X-API-KEY': '3cdfca34-711b-4da4-a7cf-061741747be3',
+//         'Content-Type': 'application/json',
+//     },
+// })
+//     .then(res => res.json())
+//     .then(json => console.log(json))
+//     .catch(err => console.log(err))
+
+
+
+
+    const API_KEY = '3cdfca34-711b-4da4-a7cf-061741747be3';
+    const BASE_URL = "https://kinopoiskapiunofficial.tech/api/";
+
+    function searchFilms(query) {
+        if (!query.trim()) return
+
+        fetch(`${BASE_URL}v2.1/films/search-by-keyword?keyword=${query}`,
+        {
+            headers: {
+                'X-API-KEY' : API_KEY,
+                'Content-Type': 'application/json',
+            }
+        }
+    )
+    .then(response => response.json())
+    .then(json => displayMovies(json.films))
 }
 
-delayMessage('Hello, world!', 5000, callback);  
+
+function displayMovies(films) {
+    const container = document.querySelector('.movies');
+    container.innerHTML = '';
+
+    films.slice(0, 10).forEach(film  => {
+        const card = document.createElement('div');
+        card.className = 'movie-card';
+        card.innerHTML = `
+        <img src="${film.posterUrlPreview} " alt="${film.nameRu}">
+        <h3>${film.nameRu}</h3>
+        `
+        container.appendChild(card);
+    })
+}
+
+window.addEventListener('load', () => {
+    const searchBtn = document.querySelector('.search-button');
+    searchBtn.addEventListener('click', () => {
+    const query = document.querySelector('.search-input').value;
+    searchFilms(query);
+ });
+})
