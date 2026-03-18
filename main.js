@@ -695,179 +695,179 @@
 
 // Проект TODO
 
-// const addTaskBtn = document.querySelector(".addTaskBtn");
-// const taskInput = document.querySelector(".taskInput");
-// const taskList = document.querySelector(".taskList"); 
+const addTaskBtn = document.querySelector(".addTaskBtn");
+const taskInput = document.querySelector(".taskInput");
+const taskList = document.querySelector(".taskList"); 
 
-// let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-// const createTaskElement = (task, index) => {
-//     const li = document.createElement("li");
+const createTaskElement = (task, index) => {
+    const li = document.createElement("li");
     
-//     const numberSpan = document.createElement("span");
-//     numberSpan.classList.add("task-number");
-//     numberSpan.textContent = index + 1;
-//     li.appendChild(numberSpan);
+    const numberSpan = document.createElement("span");
+    numberSpan.classList.add("task-number");
+    numberSpan.textContent = index + 1;
+    li.appendChild(numberSpan);
 
-//     const textSpan = document.createElement("span");
-//     textSpan.classList.add("text-container");
-//     textSpan.textContent = task.text;
-//     li.appendChild(textSpan);
+    const textSpan = document.createElement("span");
+    textSpan.classList.add("text-container");
+    textSpan.textContent = task.text;
+    li.appendChild(textSpan);
 
-//     if (task.complete) {
-//         li.classList.add("completed");
-//     }
+    if (task.complete) {
+        li.classList.add("completed");
+    }
 
-//    li.addEventListener("click", (event) => {
-//     if (event.target.classList.contains("delete-btn")) return;
+   li.addEventListener("click", (event) => {
+    if (event.target.classList.contains("delete-btn")) return;
     
-//     task.complete = !task.complete;
+    task.complete = !task.complete;
    
-//     li.classList.toggle("completed"); 
-//     localStorage.setItem("tasks", JSON.stringify(tasks));
-//     });
+    li.classList.toggle("completed"); 
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    });
     
-//     const deleteBtn = document.createElement("button");
-//     deleteBtn.classList.add("delete-btn");
-//     deleteBtn.textContent = "Delete task";
+    const deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delete-btn");
+    deleteBtn.textContent = "Delete task";
     
-//     deleteBtn.addEventListener("click", (evt) => {
-//         evt.stopPropagation();
-//         if (confirm("Sure to delete this task?")) {
-//             tasks.splice(index, 1);
-//             saveTasks(); 
-//         }
-//     });
+    deleteBtn.addEventListener("click", (evt) => {
+        evt.stopPropagation();
+        if (confirm("Sure to delete this task?")) {
+            tasks.splice(index, 1);
+            saveTasks(); 
+        }
+    });
 
-//     li.appendChild(deleteBtn);
-//     return li;
-// };
+    li.appendChild(deleteBtn);
+    return li;
+};
 
-// const loadTasks = () => {
-//     taskList.innerHTML = ""; 
-//     tasks.forEach((task, index) => {
-//         taskList.appendChild(createTaskElement(task, index));
-//     });
-// };
+const loadTasks = () => {
+    taskList.innerHTML = ""; 
+    tasks.forEach((task, index) => {
+        taskList.appendChild(createTaskElement(task, index));
+    });
+};
 
-// const saveTasks = () => {
-//     localStorage.setItem("tasks", JSON.stringify(tasks));
-//     loadTasks();
-// };
-
-
-// loadTasks();
-
-// addTaskBtn.addEventListener("click", () => {
-//     const taskText = taskInput.value.trim();
-//     if (taskText !== "") {
-//         const newTask = {
-//             text: taskText,
-//             complete: false
-//         };
-//         tasks.push(newTask);
-//         saveTasks();
-//         taskInput.value = "";
-//     }
-// });
+const saveTasks = () => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    loadTasks();
+};
 
 
+loadTasks();
+
+addTaskBtn.addEventListener("click", () => {
+    const taskText = taskInput.value.trim();
+    if (taskText !== "") {
+        const newTask = {
+            text: taskText,
+            complete: false
+        };
+        tasks.push(newTask);
+        saveTasks();
+        taskInput.value = "";
+    }
+});
 
 
 
-//Самостоятельная работа
-//1.1
-// function splitEvenOdd(arr) {
-// let evenNumbers = [];
-// let oddNumbers = [];
-//  for (let i = 0; i < arr.length; i++) {
-//     if (arr[i]%2 === 0) {
-//         evenNumbers.push(arr[i]);
-//     }
-//     else {
-//         oddNumbers.push(arr[i]);
-//     }
-//  }
-//  return evenNumbers.concat(oddNumbers)
-// };
-// console.log(splitEvenOdd([1, 2, 3, 4, 5, 6]));
-// console.log(splitEvenOdd([3, 7, 1]));
 
-//1.2.
 
-// function averageOfArray(arr) {
-//     if (arr.Length === 0) {
-//  return 0;
-// };
-// let sum = arr.reduce((acc, num) => acc + num, 0);
-// let average = sum / arr.length;
-// return Math.round(average*100)/100;
-// };
-// console.log(averageOfArray([10, 20, 30, 40]));
-// console.log(averageOfArray([1.5, 2.5, 3.5]));
+// Самостоятельная работа
+// 1.1
+function splitEvenOdd(arr) {
+let evenNumbers = [];
+let oddNumbers = [];
+ for (let i = 0; i < arr.length; i++) {
+    if (arr[i]%2 === 0) {
+        evenNumbers.push(arr[i]);
+    }
+    else {
+        oddNumbers.push(arr[i]);
+    }
+ }
+ return evenNumbers.concat(oddNumbers)
+};
+console.log(splitEvenOdd([1, 2, 3, 4, 5, 6]));
+console.log(splitEvenOdd([3, 7, 1]));
 
-//1.3 Цензура
+// 1.2.
 
-// function censorWord(str, word) {
-//     let regex = new RegExp(word, 'gi');
-//   return str.replace(regex, '[цензура]');
-// }
-// console.log(censorWord('javascript это круто. Я люблю javascript!', 'javascript'));
+function averageOfArray(arr) {
+    if (arr.Length === 0) {
+ return 0;
+};
+let sum = arr.reduce((acc, num) => acc + num, 0);
+let average = sum / arr.length;
+return Math.round(average*100)/100;
+};
+console.log(averageOfArray([10, 20, 30, 40]));
+console.log(averageOfArray([1.5, 2.5, 3.5]));
+
+// 1.3 Цензура
+
+function censorWord(str, word) {
+    let regex = new RegExp(word, 'gi');
+  return str.replace(regex, '[цензура]');
+}
+console.log(censorWord('javascript это круто. Я люблю javascript!', 'javascript'));
 
 //2.1  Список покупок
 
-// function addToCart(cart, productName, amount) {
-//  if (cart[productName]) {
-//  cart[productName] += amount;
-// } else {
-//  cart[productName] = amount;
-// }
-//  return cart;
-// };
-// const cart = { "яблоки": 5, "бананы": 3, "молоко": 1 };
-// addToCart(cart, "бананы", 20)
-// console.log(cart);
+function addToCart(cart, productName, amount) {
+ if (cart[productName]) {
+ cart[productName] += amount;
+} else {
+ cart[productName] = amount;
+}
+ return cart;
+};
+const cart = { "яблоки": 5, "бананы": 3, "молоко": 1 };
+addToCart(cart, "бананы", 20)
+console.log(cart);
 
 //2.2  Ключи и значения
 
-// function swapKeysAndValues(obj) {
-//  const newObj = {};
+function swapKeysAndValues(obj) {
+ const newObj = {};
  
-//  for (const key in obj) {
+ for (const key in obj) {
  
-//  newObj[obj[key]] = key;
-// }
-// return newObj;
-// }
+ newObj[obj[key]] = key;
+}
+return newObj;
+}
 
-// const original = {a: '1', b: '2', c: '3'};
-// const swapped = swapKeysAndValues(original);
+const original = {a: '1', b: '2', c: '3'};
+const swapped = swapKeysAndValues(original);
 
-// console.log(swapped);
+console.log(swapped);
 
 //3.1 Фильтрация строк
 
-// function filterStrings(arr, minLength) {
-//  return arr.filter(str => str.length >= minLength);
-// }
-//  const strings = ["ahrf" , 'bgbgtrgb', 'cbtrb', 'dbtr', 'etbtrb'];
-// const result = filterStrings(strings, 5);
-// console.log(result);
+function filterStrings(arr, minLength) {
+ return arr.filter(str => str.length >= minLength);
+}
+ const strings = ["ahrf" , 'bgbgtrgb', 'cbtrb', 'dbtr', 'etbtrb'];
+const result = filterStrings(strings, 5);
+console.log(result);
 
 
 //4.1 Таймер с уведомлением
 
-// function delayMessage(message, delayMs, callback) {
-//  setTimeout(() => {
-//  console.log(message);
-//  callback();
-// }, delayMs);
-// };
-// function callback() {
-//  console.log('Wellcome!');
-// }
+function delayMessage(message, delayMs, callback) {
+ setTimeout(() => {
+ console.log(message);
+ callback();
+}, delayMs);
+};
+function callback() {
+ console.log('Wellcome!');
+}
 
-// delayMessage('Hello, world!', 5000, callback);  
+delayMessage('Hello, world!', 5000, callback);  
 
 
 
@@ -889,44 +889,44 @@
 
 
 
-    const API_KEY = '3cdfca34-711b-4da4-a7cf-061741747be3';
-    const BASE_URL = "https://kinopoiskapiunofficial.tech/api/";
+//     const API_KEY = '3cdfca34-711b-4da4-a7cf-061741747be3';
+//     const BASE_URL = "https://kinopoiskapiunofficial.tech/api/";
 
-    function searchFilms(query) {
-        if (!query.trim()) return
+//     function searchFilms(query) {
+//         if (!query.trim()) return
 
-        fetch(`${BASE_URL}v2.1/films/search-by-keyword?keyword=${query}`,
-        {
-            headers: {
-                'X-API-KEY' : API_KEY,
-                'Content-Type': 'application/json',
-            }
-        }
-    )
-    .then(response => response.json())
-    .then(json => displayMovies(json.films))
-}
+//         fetch(`${BASE_URL}v2.1/films/search-by-keyword?keyword=${query}`,
+//         {
+//             headers: {
+//                 'X-API-KEY' : API_KEY,
+//                 'Content-Type': 'application/json',
+//             }
+//         }
+//     )
+//     .then(response => response.json())
+//     .then(json => displayMovies(json.films))
+// }
 
 
-function displayMovies(films) {
-    const container = document.querySelector('.movies');
-    container.innerHTML = '';
+// function displayMovies(films) {
+//     const container = document.querySelector('.movies');
+//     container.innerHTML = '';
 
-    films.slice(0, 10).forEach(film  => {
-        const card = document.createElement('div');
-        card.className = 'movie-card';
-        card.innerHTML = `
-        <img src="${film.posterUrlPreview} " alt="${film.nameRu}">
-        <h3>${film.nameRu}</h3>
-        `
-        container.appendChild(card);
-    })
-}
+//     films.slice(0, 10).forEach(film  => {
+//         const card = document.createElement('div');
+//         card.className = 'movie-card';
+//         card.innerHTML = `
+//         <img src="${film.posterUrlPreview} " alt="${film.nameRu}">
+//         <h3>${film.nameRu}</h3>
+//         `
+//         container.appendChild(card);
+//     })
+// }
 
-window.addEventListener('load', () => {
-    const searchBtn = document.querySelector('.search-button');
-    searchBtn.addEventListener('click', () => {
-    const query = document.querySelector('.search-input').value;
-    searchFilms(query);
- });
-})
+// window.addEventListener('load', () => {
+//     const searchBtn = document.querySelector('.search-button');
+//     searchBtn.addEventListener('click', () => {
+//     const query = document.querySelector('.search-input').value;
+//     searchFilms(query);
+//  });
+// })
